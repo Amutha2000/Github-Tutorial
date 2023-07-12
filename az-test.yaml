@@ -1,0 +1,16 @@
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.7' # Replace with the version of Python you're using
+    addToPath: true
+
+- script: |
+    pip install mysql-connector-python
+    
+  displayName: 'Install mysql-connector-python and run script'
+
+    
